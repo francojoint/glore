@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+# Skip commits starting with [tmp] (will run on push)
+[[ $(cat "$1") =~ ^\[tmp\]* ]] && exit 0
+
+# Run commitlint
+commitlint --edit "$1"
