@@ -33,6 +33,7 @@
     "typescript",
     "typescriptreact"
   ],
+  "eslint.workingDirectories": [{ "mode": "auto" }],
   "files.exclude": {
     ".swc": true
   },

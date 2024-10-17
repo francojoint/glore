@@ -1,0 +1,17 @@
+{
+  "extends": "../tsconfig.json",
+  "include": ["**/*.tsx", ".next/types/**/*.ts", "next-env.d.ts"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "incremental": true,
+    "noEmit": true,
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  }
+}

@@ -1,45 +1,22 @@
-import { dirname } from 'node:path'
-import { fileURLToPath } from 'node:url'
-
-import { fixupConfigRules, fixupPluginRules } from '@eslint/compat'
-import { FlatCompat } from '@eslint/eslintrc'
-import js from '@eslint/js'
-
 import stylistic from '@stylistic/eslint-plugin'
 import gitignore from 'eslint-config-flat-gitignore'
 import importPlugin from 'eslint-plugin-import'
 import perfectionist from 'eslint-plugin-perfectionist'
 import preferArrow from 'eslint-plugin-prefer-arrow'
 import unusedImports from 'eslint-plugin-unused-imports'
-import { configs } from 'typescript-eslint'
-
-const compat = new FlatCompat({
-  baseDirectory: dirname(fileURLToPath(import.meta.url)),
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
-})
-
-const patchedConfig = fixupConfigRules([
-  ...compat.extends(
-    'next/core-web-vitals',
-    'plugin:@stylistic/recommended-extends',
-    'plugin:import/recommended',
-    'plugin:import/typescript',
-  ),
-])
+import typescript from 'typescript-eslint'
 
 /**
  * @type {import('eslint').Linter.Config}
  */
 export default [
   gitignore(),
-  ...patchedConfig,
-  ...configs.recommended,
+  ...typescript.configs.recommended,
   {
     plugins: {
-      '@stylistic': fixupPluginRules(stylistic),
-      import: fixupPluginRules(importPlugin),
-      perfectionist: fixupPluginRules(perfectionist),
+      '@stylistic': stylistic,
+      perfectionist,
+      import: importPlugin,
       'prefer-arrow': preferArrow,
       'unused-imports': unusedImports,
     },
@@ -48,6 +25,7 @@ export default [
     },
     rules: {
       'arrow-body-style': [2, 'as-needed'],
+      'comma-dangle': [2, 'always-multiline'],
       'func-style': [2, 'expression'],
       'max-lines': 2,
       'no-console': [1, { allow: ['error', 'warn'] }],
@@ -87,7 +65,8 @@ export default [
         },
       ],
 
-      '@stylistic/array-bracket-newline': 2,
+      '@stylistic/array-bracket-newline': [2, 'consistent'],
+      '@stylistic/array-bracket-spacing': [2, 'never'],
       '@stylistic/array-element-newline': [2, 'consistent'],
       '@stylistic/eol-last': 2,
       '@stylistic/jsx-curly-brace-presence': [
@@ -156,25 +135,12 @@ export default [
           groups: [
             ['side-effect', 'side-effect-style'],
             'builtin',
-            ['eslint', 'react', 'next'],
             'external',
             ['internal', 'parent', 'sibling', 'index'],
             'style',
             'object',
             'unknown',
           ],
-          customGroups: {
-            value: {
-              eslint: ['eslint', 'eslint/**/*', '@eslint', '@eslint/**/*'],
-              next: ['next', 'next/**/*'],
-              react: ['react', 'react/**/*', 'react-*', 'react-*/**/*'],
-            },
-            type: {
-              eslint: ['eslint', 'eslint/*', '@eslint', '@eslint/*'],
-              next: ['next', 'next/*'],
-              react: ['react', 'react/**/*', 'react-*', 'react-*/**/*'],
-            },
-          },
           newlinesBetween: 'always',
           internalPattern: ['@/**'],
         },
@@ -202,6 +168,7 @@ export default [
     files: ['**/*.config.?(m)[jt]s'],
     rules: {
       'import/no-anonymous-default-export': 0,
+      'no-restricted-imports': 0,
     },
   },
   {

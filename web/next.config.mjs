@@ -14,6 +14,7 @@ const withMillion = next(withBundleAnalyzer, {
   auto: true,
   log: false,
   rsc: true,
+  telemetry: false,
 })
 
 export default withMillion

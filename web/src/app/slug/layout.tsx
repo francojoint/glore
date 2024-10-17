@@ -1,4 +1,4 @@
-import '@/assets/globals.css'
+// import '@/assets/styles.css'
 
 import { type Metadata } from 'next'
 import { Inter } from 'next/font/google'

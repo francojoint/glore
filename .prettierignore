@@ -1,4 +1,4 @@
-# Ignore files handled by @stylistic
+# Ignore files handled by eslint
 *.js
 *.jsx
 *.ts

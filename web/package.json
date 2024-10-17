@@ -1,0 +1,28 @@
+{
+  "name": "web",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "analyze": "ANALYZE=true next build"
+  },
+  "dependencies": {
+    "million": "^3.1.11",
+    "next": "^14.2.15",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "^14.2.15",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "catalog:",
+    "eslint-config-next": "^14.2.15",
+    "typescript": "catalog:",
+    "typescript-eslint": "^8.8.1"
+  }
+}
