@@ -1,7 +1,13 @@
 #!/usr/bin/env sh
 
+commit=$(cat "$1")
+
 # Skip commits starting with [tmp] (will run on push)
-[[ $(cat "$1") =~ ^\[tmp\]* ]] && exit 0
+case "$commit" in
+  \[tmp\]*)
+    exit 0
+    ;;
+esac
 
 # Run commitlint
 commitlint --edit "$1"

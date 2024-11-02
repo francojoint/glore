@@ -1,30 +1,36 @@
 {
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    ".release-it.ts",
-    "next-env.d.ts"
-  ],
+  "include": [".*.ts", "*.ts", "shared"],
   "exclude": ["node_modules"],
   "compilerOptions": {
     "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
     "esModuleInterop": true,
-    "incremental": true,
+    "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
     "moduleResolution": "bundler",
-    "noEmit": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "@server/*": ["./server/src/*"],
+      "@shared/*": ["./shared/*"],
+      "@web/*": ["./web/src/*"]
     },
-    "plugins": [{ "name": "next" }],
+    "plugins": [],
+    "removeComments": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "es5",
-    "types": []
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "target": "esnext",
+    "types": ["jest", "node"]
   }
 }
