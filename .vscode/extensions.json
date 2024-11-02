@@ -1,7 +1,10 @@
 {
   "recommendations": [
+    "bradlc.vscode-tailwindcss",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
+    "million.million-lint",
     "timonwong.shellcheck",
+    "vivaxy.vscode-conventional-commits"
   ]
 }

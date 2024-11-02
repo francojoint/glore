@@ -1,28 +1,38 @@
 <div align="center">
-  <img src="public/glore.png" alt="" width="90" />
-  <h1>GloRe</h1>
+  <img src="static/glore.png" alt="" width="90" />
+  <h1>GloRe eLearning</h1>
 </div>
 
 [GloRe](https://glorecertificate.net) is an official certificate that verifies volunteering activities.
 
-Visit our website to find out how to sign up to the [GloRe eLearning platform](elearning.glorecertificate.new) and get the certificate that will recognize soft skills you have acquired.
+Visit the website to find out how to sign up to the e-learning platform and get the certificate recognizing the soft skills you have acquired.
 
 ## About
 
 The GloRe eLearning platform is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Installation
+## Usage
 
-Download the project using Git:
+### Prerequisites
+
+You must download and activate the Node.js version specified in [`.node-version`](.node-version).
+
+### Installation
+
+Download the project using the GitHub client or Git:
 
 ```sh
+gh repo clone francojoint/glore
+# or
 git clone https://github.com/francojoint/glore.git
 ```
 
-Navigate to the project directory and install the dependencies:
+Navigate to the project directory, activate pnpm using corepack and install the project dependencies:
 
 ```sh
-pnpm install # or npm install
+corepack enable
+corepack install
+pnpm install
 ```
 
 ## Usage
@@ -30,7 +40,7 @@ pnpm install # or npm install
 Run the development server:
 
 ```bash
-pnpm run dev
+pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [localhost:3000](http://localhost:3000) with your browser to see the result.
