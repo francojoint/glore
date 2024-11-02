@@ -1,0 +1,10 @@
+import { resolve } from 'path'
+
+const dbPath = resolve('db')
+
+export default {
+  config: resolve(dbPath, 'config.js'),
+  'models-path': resolve(dbPath, 'models'),
+  'seeders-path': resolve(dbPath, 'seeders'),
+  'migrations-path': resolve(dbPath, 'migrations'),
+}

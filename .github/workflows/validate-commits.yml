@@ -10,18 +10,20 @@ on:
 jobs:
   validate-commits:
     runs-on: ubuntu-latest
-    if: github.actor != 'dependabot[bot]'
+    env:
+      SHELLCHECKJS_LOGGER_LEVEL: warn
+      TURBO_TELEMETRY_DISABLED: true
+      TURBO_UI: false
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v4
         with:
-          version: 8
+          run_install: true
       - uses: actions/setup-node@v4
         with:
           node-version-file: .node-version
           cache: pnpm
-      - run: pnpm install
-      - name: Add node_modules binaries to PATH
+      - name: Add `node_modules` binaries to `PATH`
         run: echo ./node_modules/.bin >> $GITHUB_PATH
       - name: Run commitlint on push
         if: github.event_name == 'push' && !github.event.forced && github.event.before != 0000000000000000000000000000000000000000
@@ -30,7 +32,15 @@ jobs:
         if: github.event_name == 'push' && github.event.forced
         run: commitlint --last --verbose
       - name: Run commitlint on pull request
-        if: github.event_name == 'pull_request'
+        if: github.event_name == 'pull_request' && github.actor != 'dependabot[bot]'
         run: commitlint --from ${{ github.event.pull_request.head.sha }}~${{ github.event.pull_request.commits }} --to ${{ github.event.pull_request.head.sha }} --verbose
-      - name: Run code linters
+      - name: Check types
+        run: pnpm run typecheck
+      - name: Run ESLint
         run: pnpm run lint
+      - name: Run Prettier
+        run: pnpm run lint:format
+      - name: Run ShellCheck
+        run: pnpm run lint:shell
+      - name: Run tests
+        run: pnpm run test
