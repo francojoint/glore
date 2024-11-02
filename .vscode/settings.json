@@ -33,10 +33,27 @@
     "typescript",
     "typescriptreact"
   ],
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  "files.associations": {
+    "*.css": "tailwindcss",
+    "*.js": "javascript",
+    "*.jsx": "javascriptreact",
+    "*.ts": "typescript",
+    "*.tsx": "typescriptreact"
+  },
   "files.exclude": {
     ".swc": true
   },
   "html.format.indentInnerHtml": true,
   "html.format.unformatted": "html,style",
-  "prettier.configPath": "prettier.config.mjs"
+  "prettier.configPath": "prettier.config.mjs",
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.experimental.classRegex": [
+    ["[\"'`]([^\"'`]*).*?[\"'`]", "cva\\(([^)]*)\\)"],
+    ["(?:'|\"|`)([^']*)(?:'|\"|`)", "cx\\(([^)]*)\\)"]
+  ]
 }

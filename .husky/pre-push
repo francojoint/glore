@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 
 # Run CI checks
-pnpm run ci
+TURBO_UI=false pnpm run check

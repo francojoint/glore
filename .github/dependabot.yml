@@ -7,7 +7,6 @@ updates:
       interval: "monthly"
     labels:
       - "dependencies"
-      - "npm"
     groups:
       deps:
         applies-to: "version-updates"
@@ -18,6 +17,6 @@ updates:
         applies-to: "security-updates"
         dependency-type: "production"
     commit-message:
-      prefix: "build(deps)"
-      prefix-development: "build(deps-dev)"
+      prefix: "build"
+      prefix-development: "build"
       include: "scope"
