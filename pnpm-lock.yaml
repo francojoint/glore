@@ -73,7 +73,7 @@ importers:
         version: 3.6.3(@typescript-eslint/parser@8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.3)(eslint@9.12.0(jiti@1.21.6)))(eslint@9.12.0(jiti@1.21.6))
       eslint-plugin-import:
         specifier: ^2.31.0
-        version: 2.31.0(@typescript-eslint/parser@8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.5.4))(eslint-plugin-import@2.31.0)(eslint@9.12.0(jiti@1.21.6)))(eslint@9.12.0(jiti@1.21.6))
+        version: 2.31.0(@typescript-eslint/parser@8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.3)(eslint@9.12.0(jiti@1.21.6))
       eslint-plugin-perfectionist:
         specifier: ^3.8.0
         version: 3.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.5.4)
@@ -144,8 +144,8 @@ importers:
         specifier: ^5.0.1
         version: 5.1.0
       '@fastify/type-provider-typebox':
-        specifier: ^5.0.0
-        version: 5.0.0(@sinclair/typebox@0.33.17)
+        specifier: ^5.0.1
+        version: 5.0.1(@sinclair/typebox@0.33.17)
       '@fastify/under-pressure':
         specifier: ^9.0.1
         version: 9.0.1
@@ -156,8 +156,8 @@ importers:
         specifier: ^9.0.1
         version: 9.0.1
       fastify:
-        specifier: ^5.0.0
-        version: 5.0.0
+        specifier: ^5.1.0
+        version: 5.1.0
       fastify-cli:
         specifier: ^7.0.0
         version: 7.0.1
@@ -165,14 +165,14 @@ importers:
         specifier: ^5.0.1
         version: 5.0.1
       pg:
-        specifier: ^8.13.0
-        version: 8.13.0
+        specifier: ^8.13.1
+        version: 8.13.1
       pg-hstore:
         specifier: ^2.3.4
         version: 2.3.4
       sequelize:
-        specifier: ^6.37.4
-        version: 6.37.4(pg-hstore@2.3.4)(pg@8.13.0)
+        specifier: ^6.37.5
+        version: 6.37.5(pg-hstore@2.3.4)(pg@8.13.1)
     devDependencies:
       eslint:
         specifier: 'catalog:'
@@ -609,8 +609,8 @@ packages:
   '@fastify/swagger@9.2.0':
     resolution: {integrity: sha512-tuy78fW3G4z8EhTdopAu6gXbllFrQBkcYduOmPiEVESZNaLnxR8N80YVu7F6WuMwk7sd9rYGnGo9bxDQChCFjg==}
 
-  '@fastify/type-provider-typebox@5.0.0':
-    resolution: {integrity: sha512-E6D31dfF0l7wLwUji0DIoHlaHzyUCTJV4K0FP+bdibuEj+YVh8QGhwH9MqYi+FoTZRTu+bXaDs+W9kdMImt+Bw==}
+  '@fastify/type-provider-typebox@5.0.1':
+    resolution: {integrity: sha512-zepdCWmgvpcLS06DN5vznMJLUP/5gLt/X3lVXZvddXmHSImQxm2Em+dV64b6x9P4G4V9DKuS4EL08ASjpCboNA==}
     peerDependencies:
       '@sinclair/typebox': '>=0.26 <=0.33'
 
@@ -2517,8 +2517,8 @@ packages:
   fastify-plugin@5.0.1:
     resolution: {integrity: sha512-HCxs+YnRaWzCl+cWRYFnHmeRFyR5GVnJTAaCJQiYzQSDwK9MgJdyAsuL3nh0EWRCYMgQ5MeziymvmAhUHYHDUQ==}
 
-  fastify@5.0.0:
-    resolution: {integrity: sha512-Qe4dU+zGOzg7vXjw4EvcuyIbNnMwTmcuOhlOrOJsgwzvjEZmsM/IeHulgJk+r46STjdJS/ZJbxO8N70ODXDMEQ==}
+  fastify@5.1.0:
+    resolution: {integrity: sha512-0SdUC5AoiSgMSc2Vxwv3WyKzyGMDJRAW/PgNsK1kZrnkO6MeqUIW9ovVg9F2UGIqtIcclYMyeJa4rK6OZc7Jxg==}
 
   fastparallel@2.4.1:
     resolution: {integrity: sha512-qUmhxPgNHmvRjZKBFUNI0oZuuH9OlSIOXmJ98lhKPxMZZ7zS/Fi0wRHOihDSz0R1YiIOjxzOY4bq65YTcdBi2Q==}
@@ -4086,8 +4086,8 @@ packages:
     resolution: {integrity: sha512-qTAAlrEsl8s4OiEQY69wDvcMIdQN6wdz5ojQiOy6YRMuynxenON0O5oCpJI6lshc6scgAY8qvJ2On/p+CXY0GA==}
     engines: {node: '>=4'}
 
-  pg@8.13.0:
-    resolution: {integrity: sha512-34wkUTh3SxTClfoHB3pQ7bIMvw9dpFU1audQQeZG837fmHfHpr14n/AELVDoOYVDW2h5RDWU78tFjkD+erSBsw==}
+  pg@8.13.1:
+    resolution: {integrity: sha512-OUir1A0rPNZlX//c7ksiu7crsGZTKSOXJPgtNiHGIlC9H0lO+NC6ZDYksSgBYY/thSWhnSRBv8w1lieNNGATNQ==}
     engines: {node: '>= 8.0.0'}
     peerDependencies:
       pg-native: '>=3.0.1'
@@ -4524,8 +4524,8 @@ packages:
     resolution: {integrity: sha512-G9c0qlIWQSK29pR/5U2JF5dDQeqqHRragoyahj/Nx4KOOQ3CPPfzxnfqFPCSB7x5UgjOgnZ61nSxz+fjDpRlJg==}
     engines: {node: '>= 10.0.0'}
 
-  sequelize@6.37.4:
-    resolution: {integrity: sha512-+8B0p00EKmxJpwwruDI0drxh4wNSC0YB9pVhOajRzfMI+uIDi5V7rJPC8RTTkLmKUoAIatJZn6lW9gj6bmmYKQ==}
+  sequelize@6.37.5:
+    resolution: {integrity: sha512-10WA4poUb3XWnUROThqL2Apq9C2NhyV1xHPMZuybNMCucDsbbFuKg51jhmyvvAUyUqCiimwTZamc3AHhMoBr2Q==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       ibm_db: '*'
@@ -5790,7 +5790,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@fastify/type-provider-typebox@5.0.0(@sinclair/typebox@0.33.17)':
+  '@fastify/type-provider-typebox@5.0.1(@sinclair/typebox@0.33.17)':
     dependencies:
       '@sinclair/typebox': 0.33.17
 
@@ -7686,7 +7686,7 @@ snapshots:
       eslint: 9.12.0(jiti@1.21.6)
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.6.3(@typescript-eslint/parser@8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.3)(eslint@9.12.0(jiti@1.21.6)))(eslint@9.12.0(jiti@1.21.6))
-      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.5.4))(eslint-plugin-import@2.31.0)(eslint@9.12.0(jiti@1.21.6)))(eslint@9.12.0(jiti@1.21.6))
+      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.3)(eslint@9.12.0(jiti@1.21.6))
       eslint-plugin-jsx-a11y: 6.10.0(eslint@9.12.0(jiti@1.21.6))
       eslint-plugin-react: 7.37.1(eslint@9.12.0(jiti@1.21.6))
       eslint-plugin-react-hooks: 5.0.0(eslint@9.12.0(jiti@1.21.6))
@@ -7715,20 +7715,20 @@ snapshots:
       debug: 4.3.7
       enhanced-resolve: 5.17.1
       eslint: 9.12.0(jiti@1.21.6)
-      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.5.4))(eslint-plugin-import@2.31.0)(eslint@9.12.0(jiti@1.21.6)))(eslint@9.12.0(jiti@1.21.6))
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3)(eslint@9.12.0(jiti@1.21.6))
       fast-glob: 3.3.2
       get-tsconfig: 4.8.1
       is-bun-module: 1.2.1
       is-glob: 4.0.3
     optionalDependencies:
-      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.5.4))(eslint-plugin-import@2.31.0)(eslint@9.12.0(jiti@1.21.6)))(eslint@9.12.0(jiti@1.21.6))
+      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.3)(eslint@9.12.0(jiti@1.21.6))
     transitivePeerDependencies:
       - '@typescript-eslint/parser'
       - eslint-import-resolver-node
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.5.4))(eslint-plugin-import@2.31.0)(eslint@9.12.0(jiti@1.21.6)))(eslint@9.12.0(jiti@1.21.6)):
+  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3)(eslint@9.12.0(jiti@1.21.6)):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
@@ -7739,7 +7739,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.5.4))(eslint-plugin-import@2.31.0)(eslint@9.12.0(jiti@1.21.6)))(eslint@9.12.0(jiti@1.21.6)):
+  eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.3)(eslint@9.12.0(jiti@1.21.6)):
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.1.8
@@ -7750,7 +7750,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 9.12.0(jiti@1.21.6)
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.5.4))(eslint-plugin-import@2.31.0)(eslint@9.12.0(jiti@1.21.6)))(eslint@9.12.0(jiti@1.21.6))
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.9.0(eslint@9.12.0(jiti@1.21.6))(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3)(eslint@9.12.0(jiti@1.21.6))
       hasown: 2.0.2
       is-core-module: 2.15.1
       is-glob: 4.0.3
@@ -8092,7 +8092,7 @@ snapshots:
       close-with-grace: 2.1.0
       commist: 3.2.0
       dotenv: 16.4.5
-      fastify: 5.0.0
+      fastify: 5.1.0
       fastify-plugin: 5.0.1
       generify: 4.2.0
       help-me: 4.2.0
@@ -8105,7 +8105,7 @@ snapshots:
 
   fastify-plugin@5.0.1: {}
 
-  fastify@5.0.0:
+  fastify@5.1.0:
     dependencies:
       '@fastify/ajv-compiler': 4.0.1
       '@fastify/error': 4.0.0
@@ -9847,9 +9847,9 @@ snapshots:
 
   pg-int8@1.0.1: {}
 
-  pg-pool@3.7.0(pg@8.13.0):
+  pg-pool@3.7.0(pg@8.13.1):
     dependencies:
-      pg: 8.13.0
+      pg: 8.13.1
 
   pg-protocol@1.7.0: {}
 
@@ -9861,10 +9861,10 @@ snapshots:
       postgres-date: 1.0.7
       postgres-interval: 1.2.0
 
-  pg@8.13.0:
+  pg@8.13.1:
     dependencies:
       pg-connection-string: 2.7.0
-      pg-pool: 3.7.0(pg@8.13.0)
+      pg-pool: 3.7.0(pg@8.13.1)
       pg-protocol: 1.7.0
       pg-types: 2.2.0
       pgpass: 1.0.5
@@ -10351,7 +10351,7 @@ snapshots:
 
   sequelize-pool@7.1.0: {}
 
-  sequelize@6.37.4(pg-hstore@2.3.4)(pg@8.13.0):
+  sequelize@6.37.5(pg-hstore@2.3.4)(pg@8.13.1):
     dependencies:
       '@types/debug': 4.1.12
       '@types/validator': 13.12.2
@@ -10370,7 +10370,7 @@ snapshots:
       validator: 13.12.0
       wkx: 0.5.0
     optionalDependencies:
-      pg: 8.13.0
+      pg: 8.13.1
       pg-hstore: 2.3.4
     transitivePeerDependencies:
       - supports-color
