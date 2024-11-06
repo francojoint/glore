@@ -1,21 +1,21 @@
 <div align="center">
-  <img src="static/glore.png" alt="" width="90" />
+  <img src=".github/static/glore.png" alt="" width="90" />
   <h1>GloRe eLearning</h1>
 </div>
 
 [GloRe](https://glorecertificate.net) is an official certificate that verifies volunteering activities.
 
-Visit the website to find out how to sign up to the e-learning platform and get the certificate recognizing the soft skills you have acquired.
+Visit the website to find out how to sign up to the e-learning platform and get the certificate recognizing your soft skills.
 
 ## About
 
-The GloRe eLearning platform is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+The GloRe eLearning platform is a monorepository including a [Next.js](https://nextjs.org) application backed by [NestJS](https://nestjs.com) and [tRPC](https://trpc.io).
 
 ## Usage
 
 ### Prerequisites
 
-You must download and activate the Node.js version specified in [`.node-version`](.node-version).
+You must download and activate the Node.js version specified [here](.node-version).
 
 ### Installation
 
@@ -27,9 +27,10 @@ gh repo clone francojoint/glore
 git clone https://github.com/francojoint/glore.git
 ```
 
-Navigate to the project directory, activate pnpm using corepack and install the project dependencies:
+Navigate to the project directory, activate pnpm using Corepack and install the project dependencies:
 
 ```sh
+cd glore
 corepack enable
 corepack install
 pnpm install

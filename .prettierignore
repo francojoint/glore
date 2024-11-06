@@ -1,5 +1,3 @@
-.next/
-.turbo/
-node_modules/
-*-lock.json
-*-lock.yaml
+/apps/
+/packages/
+pnpm-lock.yaml

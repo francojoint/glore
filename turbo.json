@@ -1,14 +1,14 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "ui": "tui",
   "tasks": {
     "dev": {
       "persistent": true,
-      "cache": false
+      "cache": false,
+      "interactive": true
     },
     "build": {
       "dependsOn": ["^build"],
-      "outputs": [".next/**", "!.next/cache/**"]
+      "outputs": [".next/**", "!.next/cache/**", "build/**"]
     },
     "start": {
       "dependsOn": ["^start"]
@@ -24,6 +24,9 @@
     },
     "lint:fix": {
       "dependsOn": ["^lint:fix"]
+    },
+    "check": {
+      "dependsOn": ["^check"]
     }
   }
 }

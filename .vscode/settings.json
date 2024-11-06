@@ -27,12 +27,13 @@
   "eslint.format.enable": true,
   "eslint.lintTask.enable": true,
   "eslint.useFlatConfig": true,
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
+  "search.exclude": {
+    "**/.private": true,
+    "**/.turbo": true,
+    "**/build": true,
+    "**/node_modules": true
+  },
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
   "eslint.workingDirectories": [
     {
       "mode": "auto"
@@ -45,9 +46,6 @@
     "*.ts": "typescript",
     "*.tsx": "typescriptreact"
   },
-  "files.exclude": {
-    ".swc": true
-  },
   "html.format.indentInnerHtml": true,
   "html.format.unformatted": "html,style",
   "prettier.configPath": "prettier.config.mjs",
@@ -55,5 +53,6 @@
   "tailwindCSS.experimental.classRegex": [
     ["[\"'`]([^\"'`]*).*?[\"'`]", "cva\\(([^)]*)\\)"],
     ["(?:'|\"|`)([^']*)(?:'|\"|`)", "cx\\(([^)]*)\\)"]
-  ]
+  ],
+  "tailwindCSS.files.exclude": ["**/.git/**", "**/node_modules/**", "server/**", "static/**"]
 }

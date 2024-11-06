@@ -1,3 +1,0 @@
-#!/usr/bin/env sh
-
-prettier ./**/*.{mjs,[jt]s,[jt]sx,json,yaml,yml} "$@"

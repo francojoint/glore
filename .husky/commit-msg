@@ -2,9 +2,9 @@
 
 commit=$(cat "$1")
 
-# Skip commits starting with [tmp] (will run on push)
+# Skip temporary commits
 case "$commit" in
-  \[tmp\]*)
+  \[tmp\]*|\#*)
     exit 0
     ;;
 esac

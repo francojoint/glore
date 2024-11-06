@@ -1,4 +1,7 @@
 #!/usr/bin/env sh
 
+# Run commitlint on new commits
+commitlint --from origin/main --to HEAD --verbose
+
 # Run CI checks
 TURBO_UI=false pnpm run check

@@ -1,0 +1,24 @@
+{
+  "name": "@repo/tsconfig",
+  "version": "0.0.0",
+  "files": [
+    "base.json",
+    "fastify.json",
+    "nextjs.json"
+  ],
+  "exports": {
+    ".": "./base.json",
+    "./*": "./*.json"
+  },
+  "prettier": "@repo/prettier-config",
+  "scripts": {
+    "lint": "@prettier check",
+    "lint:fix": "@prettier write",
+    "check": "pnpm run lint"
+  },
+  "dependencies": {
+    "@repo/bin": "workspace:^",
+    "@repo/prettier-config": "workspace:^",
+    "prettier": "catalog:"
+  }
+}
