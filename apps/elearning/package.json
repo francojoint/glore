@@ -1,0 +1,40 @@
+{
+  "name": "elearning",
+  "version": "0.0.0",
+  "prettier": "@repo/prettier-config",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . && @prettier check",
+    "lint:fix": "eslint . --fix && @prettier write",
+    "check": "pnpm run typecheck && pnpm run lint",
+    "component": "@component",
+    "analyze": "ANALYZE=true next build"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^3.2.3",
+    "@emotion/react": "^11.13.5",
+    "million": "^3.1.11",
+    "next": "^15.0.4",
+    "next-themes": "^0.4.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.4.0"
+  },
+  "devDependencies": {
+    "@chakra-ui/cli": "^3.2.3",
+    "@next/bundle-analyzer": "^15.0.4",
+    "@repo/bin": "workspace:^",
+    "@repo/eslint-config": "workspace:^",
+    "@repo/prettier-config": "workspace:^",
+    "@repo/tsconfig": "workspace:^",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.1",
+    "eslint": "catalog:",
+    "eslint-config-next": "^15.0.4",
+    "prettier": "catalog:",
+    "typescript": "catalog:"
+  }
+}

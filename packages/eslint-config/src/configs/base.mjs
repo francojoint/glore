@@ -1,14 +1,16 @@
-import stylistic from '@stylistic/eslint-plugin'
-import stylisticTs from '@stylistic/eslint-plugin-ts'
-import gitignore from 'eslint-config-flat-gitignore'
+import stylisticPlugin from '@stylistic/eslint-plugin'
+import stylisticTsPlugin from '@stylistic/eslint-plugin-ts'
+import gitignoreConfig from 'eslint-config-flat-gitignore'
 import importPlugin from 'eslint-plugin-import'
-import perfectionist from 'eslint-plugin-perfectionist'
-import preferArrow from 'eslint-plugin-prefer-arrow'
-import prettier from 'eslint-plugin-prettier'
-import unusedImports from 'eslint-plugin-unused-imports'
+import perfectionistPlugin from 'eslint-plugin-perfectionist'
+import preferArrowPlugin from 'eslint-plugin-prefer-arrow'
+import prettierPlugin from 'eslint-plugin-prettier'
+import unusedImportsPlugin from 'eslint-plugin-unused-imports'
 import typescript from 'typescript-eslint'
 
-import { deepMerge, noRestrictedImports, sortImports } from '../utils.mjs'
+import deepMerge from 'deepmerge'
+
+import { noRestrictedImports, sortImports } from '../utils.mjs'
 
 /**
  * Default options for the base configuration.
@@ -46,18 +48,18 @@ const configBase = (options = {}) => {
    * @type {import('eslint').Linter.Config[]}
    */
   return [
-    gitignore(),
+    gitignoreConfig(),
     ...typescript.configs.recommended,
     {
       name: 'base',
       plugins: {
-        '@stylistic': stylistic,
-        '@stylistic/ts': stylisticTs,
-        perfectionist,
+        '@stylistic': stylisticPlugin,
+        '@stylistic/ts': stylisticTsPlugin,
+        perfectionist: perfectionistPlugin,
         import: importPlugin,
-        'prefer-arrow': preferArrow,
-        prettier,
-        'unused-imports': unusedImports,
+        'prefer-arrow': preferArrowPlugin,
+        prettier: prettierPlugin,
+        'unused-imports': unusedImportsPlugin,
       },
       settings: {
         ...(opts.imports.internal.length && {

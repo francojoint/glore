@@ -21,22 +21,10 @@
     "lint:fix": "pnpm run root:lint:fix && turbo run lint:fix",
     "check": "pnpm run root:check && turbo run check",
     "release": "release-it",
-    "clear": "@rm .turbo build node_modules",
-    "reset": "pnpm run clear && pnpm install",
     "root:typecheck": "tsc --noEmit",
     "root:lint": "eslint . && @prettier check && @shellcheck .husky",
     "root:lint:fix": "eslint --fix . && @prettier write && @shellcheck .husky",
-    "root:check": "pnpm run root:typecheck && pnpm run root:lint",
-    "server:dev": "turbo run dev --filter server",
-    "server:build": "turbo run build --filter server",
-    "server:start": "turbo run start --filter server",
-    "server:test": "turbo run test --filter server",
-    "server:check": "turbo run check --filter server",
-    "web:dev": "turbo run dev --filter web",
-    "web:build": "turbo run build --filter web",
-    "web:start": "turbo run start --filter web",
-    "web:test": "turbo run test --filter web",
-    "web:check": "turbo run check --filter web"
+    "root:check": "pnpm run root:typecheck && pnpm run root:lint"
   },
   "dependencies": {
     "@commitlint/cli": "^19.6.0",
@@ -48,7 +36,6 @@
     "@repo/eslint-config": "workspace:^",
     "@repo/prettier-config": "workspace:^",
     "@repo/tsconfig": "workspace:^",
-    "@types/node": "catalog:",
     "eslint": "catalog:",
     "husky": "^9.1.7",
     "prettier": "catalog:",
@@ -56,5 +43,8 @@
     "release-it-pnpm": "^4.6.3",
     "turbo": "^2.3.0",
     "typescript": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1"
   }
 }

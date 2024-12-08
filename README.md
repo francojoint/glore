@@ -9,7 +9,7 @@ Visit the website to find out how to sign up to the e-learning platform and get 
 
 ## About
 
-The GloRe eLearning platform is a monorepository including a [Next.js](https://nextjs.org) application backed by [NestJS](https://nestjs.com) and [tRPC](https://trpc.io).
+The GloRe eLearning platform is a monorepository including a [Next.js](https://nextjs.org) application backed by [Supabase](https://supabase.com).
 
 ## Usage
 

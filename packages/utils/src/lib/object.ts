@@ -1,5 +1,3 @@
-import deepmerge from 'deepmerge'
-
 /**
  * Merges the enumerable properties of two or more objects.
  */
@@ -7,13 +5,6 @@ export const merge = <T extends Record<any, any> | any[]>(...args: T[]): T =>
   (Array.isArray(args[0])
     ? [...new Set(...args.flat())]
     : args.reduce((result, obj) => Object.assign(result, obj), {})) as T
-
-/**
- * Merges the enumerable properties of two or more objects deeply.
- *
- * @see https://npmjs.com/package/deepmerge
- */
-export const deepMerge = deepmerge
 
 /**
  * Plucks keys from an object.

@@ -4,7 +4,11 @@ import config from './src/index.mjs'
  * @type {import('eslint').Linter.Config[]}
  */
 export default [
-  ...config(),
+  ...config({
+    imports: {
+      internal: ['deepmerge'],
+    },
+  }),
   {
     rules: {
       'no-restricted-imports': 0,

@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "exports": {
     ".": "./src/index.ts",
-    "./*": "./src/types/*"
+    "./*": "./src/lib/*"
   },
   "prettier": "@repo/prettier-config",
   "scripts": {

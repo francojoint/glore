@@ -1,11 +1,6 @@
 import { builtinModules } from 'node:module'
 
-import deepmerge from 'deepmerge'
-
-/**
- * Merges the enumerable properties of two or more objects.
- */
-export const deepMerge = deepmerge
+import deepMerge from 'deepmerge'
 
 /**
  * Custom config options.

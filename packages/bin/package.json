@@ -3,12 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "bin": {
-    "@bin": "lib/bin.sh",
     "@component": "lib/component.sh",
-    "@db": "lib/db.sh",
-    "@fastify": "lib/fastify.sh",
     "@prettier": "lib/prettier.sh",
-    "@rm": "lib/rm.sh",
     "@shellcheck": "lib/shellcheck.sh"
   },
   "scripts": {
